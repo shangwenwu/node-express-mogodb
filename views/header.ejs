@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+
+  		<nav>
+  				<span><a href="/">主页</a></span>
+          <% if (user) { %>
+      				<span><a href="/post">发布</a></span>
+      				<span><a href="/logout">退出</a></span>
+          <% } else { %>
+              <span><a href="/login">登录</a></span>
+              <span><a href="/reg">注册</a></span>
+          <% } %>
+  		</nav>
+
+      <% if (success) { %>
+          <div><%= success %></div>
+      <% } %>
+
+      <% if (error) { %>
+          <div><%= error %></div>
+      <% } %>
